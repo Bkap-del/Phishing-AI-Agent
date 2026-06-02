@@ -1,7 +1,9 @@
 1. When training decision tree, Gaussian Naive Biases (GNB), and K nearest neigbors (Knn), I found that knn had the highest F-Score by a slim margin, with Decision Tree being a
-close second and GNB performing the worst by far. However, when looking at the Standard Deviation between each method, the decision tree comfortably had the lowest deviation, making it the most consistent,
-although all 3 methods performed well in this regard.
+close second and GNB performing the worst by far, likely because many features of phishing URL's are highly correlated. However, when looking at the Standard Deviation between each method, 
+the decision tree comfortably had the lowest deviation, making it the most consistent, although all 3 methods performed well in this regard.
+
 2. When looking at the confusion matricies of each method, preventing false negatives is naturally the most important metric. GNB only identified one false negative, but when comparing
 with its incredibly low F-Score, the model is clearly underfit and just classifying nearly everything as a positive. 
+
 3. When choosing which model to move forward with, GNB was naturally out of the question, leaving the choice between KNN and Decision Tree. While KNN scored slightly better on F1, I opted 
 for the Decision Tree model because of its considerably lower standard deviation and relative F1 score, meaning although it was performing slightly worse, it was the most consistent.
