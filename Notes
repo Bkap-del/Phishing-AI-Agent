@@ -12,3 +12,8 @@ ssl final state as the most important. This makes sense as my tree likely uses t
 
 4. When choosing which model to move forward with, GNB was naturally out of the question, leaving the choice between KNN and Decision Tree. While KNN scored slightly better on F1, I opted 
 for the Decision Tree model because of its considerably lower standard deviation and relative F1 score, meaning although it was performing slightly worse, it was the most consistent.
+
+5. I implemented a MLP to see if it could get me better results that my previous algorithms and found it to be considerably better. I then did some hyperparamter tuning on the MLP and found
+that naturally a higher node count per layer was better, but I need to work to find a balance that is accurate but not too computationally expensive. I did however find that the ReLU activation
+function that I originally used was worse than tanh, an activation function I ha never worked with previously. After some research, I found that this was likely because while RELU just killed
+any negative values in my scaled data, tanh preserved it making it a more practical choice.
