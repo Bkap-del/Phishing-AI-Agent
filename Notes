@@ -7,7 +7,8 @@ with its incredibly low F-Score, the model is clearly underfit and just classify
 
 3. I decided to perform feature importance on the decision tree model to get a better understanding of which features were most important to correctly classifying phishing URLs.
 After doing some reading of feature importance, I learned about permutation importance and decided to implement that as well, leading to some interesting findings. I found that 
-both importance methods returned a different feature as the most important. Will update later computer gonna die
+both importance methods returned a different feature with the highest importance score, with permutation deeming the URL of the anchor as the most important and feature importance determining
+ssl final state as the most important. This makes sense as my tree likely uses the ssl final state data which is noisy to make decisions whule the URL is a more accurate classifier.
 
 4. When choosing which model to move forward with, GNB was naturally out of the question, leaving the choice between KNN and Decision Tree. While KNN scored slightly better on F1, I opted 
 for the Decision Tree model because of its considerably lower standard deviation and relative F1 score, meaning although it was performing slightly worse, it was the most consistent.
