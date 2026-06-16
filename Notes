@@ -18,4 +18,9 @@ that naturally a higher node count per layer was better, but I need to work to f
 function that I originally used was worse than tanh, an activation function I ha never worked with previously. After some research, I found that this was likely because while RELU just killed
 any negative values in my scaled data, tanh preserved it making it a more practical choice.
 
-6. Next steps: Random Forest/Ai Agent Loop
+6. Following my hyperparamter tuning for my most accurate algorithms (MLP and my recently implemented Random Forest), I determined that on this specific data set MLP was the more accurate
+option, likely because in the case of this dataset, the different features of a given phishing URL likely interact in ways too complex for a split in a random forest to capture but 
+a Neural Network can recognize, leading to me choosing this as my best model in this case.
+
+7. Started feature extraction for my AI Agent, extracting each specific subset from a raw URL necessary to make sure the data ultimately provided to the agent structurally aligns with the 
+data it was trained on.
