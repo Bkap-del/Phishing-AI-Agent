@@ -23,4 +23,6 @@ option, likely because in the case of this dataset, the different features of a 
 a Neural Network can recognize, leading to me choosing this as my best model in this case.
 
 7. Started feature extraction for my AI Agent, extracting each specific subset from a raw URL necessary to make sure the data ultimately provided to the agent structurally aligns with the 
-data it was trained on.
+data it was trained on. Extracted 8 of the 30 features for now.
+
+8. Completed my agent loop and got it up and running. Performing extremely poorly due to minimal training on all 30 features of the dataset, will update feature extraction bit by bit (hopefully) until all 30 features are up and running and we got a somewhat accurate model.
